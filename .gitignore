@@ -1,0 +1,10 @@
+# Ruby
+*.gem
+vendor/
+
+# Test artifacts
+coverage/
+
+# Docs
+.yardoc/
+doc/
