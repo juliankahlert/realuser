@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = 'realuser'
-  spec.version = '0.1.0'
+  spec.version = '0.1.1'
   spec.authors = ['Julian Kahlert']
   spec.email = ['90937526+juliankahlert@users.noreply.github.com']
 
@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.license = 'MIT'
 
   spec.metadata['homepage_uri'] = 'https://juliankahlert.github.io/realuser/'
-  spec.metadata['documentation_uri'] = 'https://www.rubydoc.info/gems/realuser/0.1.0'
+  spec.metadata['documentation_uri'] = 'https://www.rubydoc.info/gems/realuser/0.1.1'
   spec.metadata['source_code_uri'] = 'https://github.com/juliankahlert/realuser'
 
   spec.files = Dir['lib/**/*', 'LICENSE', 'README.md']

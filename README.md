@@ -46,7 +46,7 @@ You can also install the gem from the source repository:
 git clone https://github.com/juliankahlert/realuser.git
 cd realuser
 gem build realuser.gemspec
-sudo gem install --local realuser-0.1.0.gem
+sudo gem install --local realuser-0.1.1.gem
 ```
 
 ## API Documentation
