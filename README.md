@@ -4,6 +4,8 @@
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/juliankahlert/realuser)](https://github.com/juliankahlert/realuser/commits/)
 [![GitHub Tag](https://img.shields.io/github/v/tag/juliankahlert/realuser)](https://github.com/juliankahlert/realuser)
 [![Gem Version](https://img.shields.io/gem/v/realuser)](https://rubygems.org/gems/realuser)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/20103f24ebc747cda2ebe2d2029365f6)](https://app.codacy.com/gh/juliankahlert/realuser/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/20103f24ebc747cda2ebe2d2029365f6)](https://app.codacy.com/gh/juliankahlert/realuser/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
 
 ## Introduction
 
