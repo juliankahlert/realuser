@@ -24,7 +24,7 @@ The supported installation methods are:
 
 ### Using `gitpack`
 
-To install the gem from RubyGems:
+To install the gem with gitpack:
 
 ```sh
 gitpack add juliankahlert/realuser
