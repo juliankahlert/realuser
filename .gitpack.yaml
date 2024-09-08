@@ -1,0 +1,11 @@
+---
+gitpack:
+  name: realuser
+  category: lib
+  files: "{{gem-contents}}"
+  add:
+  - sh:
+    - make install
+  rm:
+  - sh:
+    - make uninstall
