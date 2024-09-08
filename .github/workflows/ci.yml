@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Set up Ruby
@@ -23,17 +23,25 @@ jobs:
         with:
           ruby-version: '3.0'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           gem install bundler
           bundle install
 
-      - name: Run tests
+      - name: Check Formating
         run: |
           rufo -c lib/
-          bundle exec rspec
 
-      - name: Report coverage
+      - name: test & Publish Code Coverage to Code Climate
+        uses: paambaati/codeclimate-action@f429536ee076d758a24705203199548125a28ca7
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: bundle exec rspec
+          coverageLocations: |
+            ${{github.workspace}}/coverage/cov*.xml:cobertura
+
+      - name: Report Coverage to Codacy
         run: |
           bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/coverage.xml
         env:
