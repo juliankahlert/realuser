@@ -91,7 +91,7 @@ sudo gem install --local realuser-0.1.0.gem
     - `pid` (Integer): The process ID to retrieve the PPID for. Defaults to `Process.pid`.
   - **Returns**: Integer representing the PPID, or `nil` if the PPID cannot be determined.
 
-For detailed API documentation, please refer to the [YARD documentation](https://rubydoc.info/github/juliankahlert/realuser).
+For detailed API documentation, please refer to the [YARD documentation](https://juliankahlert.github.io/realuser/).
 
 ## Example Usage
 
@@ -100,20 +100,17 @@ Here is an example of how to use the `RealUser` gem to find the RUID of a proces
 ```ruby
 require 'realuser'
 
-# Create an instance of the RealUser module
-real_user = RealUser.new
-
 # Get the RUID of the current process
-puts "Current process RUID: #{real_user.ruid}"
+puts "Current process RUID: #{RealUser.ruid()}"
 
 # Get the RUID of a specific process (PID 1234)
-puts "Process 1234 RUID: #{real_user.ruid(1234)}"
+puts "Process 1234 RUID: #{RealUser.ruid(1234)}"
 
 # Perform a deep resolution to find the root RUID of a specific process (PID 1234)
-puts "Root RUID of process 1234: #{real_user.ruid(pid: 1234, deep: true)}"
+puts "Root RUID of process 1234: #{RealUser.ruid(pid: 1234, deep: true)}"
 
 # Perform a shallow resolution to find the nearest ancestor with a different RUID
-puts "Shallow RUID of process 1234: #{real_user.ruid(pid: 1234, deep: false)}"
+puts "Shallow RUID of process 1234: #{RealUser.ruid(pid: 1234, deep: false)}"
 ```
 
 ## Encouragement for Contribution
