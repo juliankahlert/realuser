@@ -32,16 +32,11 @@ jobs:
         run: |
           rufo -c lib/
 
-      - name: test & Publish Code Coverage to Code Climate
-        uses: paambaati/codeclimate-action@f429536ee076d758a24705203199548125a28ca7
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        with:
-          coverageCommand: bundle exec rspec
-          coverageLocations: |
-            ${{github.workspace}}/coverage/cov*.xml:cobertura
+      - name: Run tests
+        run: |
+          bundle exec rspec
 
-      - name: Report Coverage to Codacy
+      - name: Report coverage
         run: |
           bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/coverage.xml
         env:
